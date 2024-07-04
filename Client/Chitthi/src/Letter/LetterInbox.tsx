@@ -157,7 +157,7 @@ type LetterType = 'sent' | 'received';
 
 const LetterInbox: React.FC<any> = ({onLetterSelect}) => {
   const navigate = useNavigate();
-  const [filter, setFilter] = useState<LetterType>('sent'); // Default filter to 'sent'
+  const [filter, setFilter] = useState<LetterType>('received'); // Default filter to 'sent'
   const [selectedLetter, setSelectedLetter] = useState<any>(null); // State to hold the selected letter
 
   const handleFilterChange = (newFilter: LetterType) => {

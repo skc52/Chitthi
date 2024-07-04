@@ -6,7 +6,8 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Link } from 'react-router-dom';
 import './Register.css'
-type FormValues = {
+import axios from 'axios'
+export type FormValues = {
   name: string;
   username: string;
   password: string;
@@ -26,6 +27,16 @@ const schema = yup.object().shape({
   dateOfBirth: yup.date().max(new Date(), 'Date of Birth cannot be in the future').required('Date of Birth is required').typeError('Invalid date'),
 });
 
+export type CountryData = {
+  country:string;
+  region:string;
+};
+
+// Define the type for the entire JSON structure
+export interface JsonResponse {
+  data: Record<string, CountryData>;
+}
+
 const RegisterForm: React.FC = () => {
   const { control, register, handleSubmit, formState: { errors } } = useForm<FormValues>({
     resolver: yupResolver(schema),
@@ -41,9 +52,16 @@ const RegisterForm: React.FC = () => {
 
   const [countries, setCountries] = useState<string[]>([]);
 
+  const fetchCountries = async()=>{
+    const jsonData = await axios.get('https://api.first.org/data/v1/countries');
+    // const countryData: = jsonData.data;
+    const countryRecord:JsonResponse = jsonData.data.data;
+    const countriesList: string[] = Object.values(countryRecord).map((entry: CountryData) => entry.country);
+    setCountries(countriesList);
+  }
   useEffect(() => {
     // Fetch countries list using axios or any other method
-    setCountries(['United States', 'Canada', 'United Kingdom', 'Australia', 'India']); // Example data
+    fetchCountries();
   }, []);
 
   return (

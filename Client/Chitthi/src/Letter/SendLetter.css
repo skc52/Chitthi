@@ -51,6 +51,23 @@ p{
     justify-content: space-between;
 
 }
+
+.filter{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.ageRangeContainer{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
 .letter {
   
     width: 800px; /* Adjust width as needed */
