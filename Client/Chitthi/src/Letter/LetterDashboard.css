@@ -1,0 +1,31 @@
+.letter-dashboard {
+    display: flex;
+    height: 98vh; /* Adjust height as needed */
+    justify-content: space-between;
+    border: 2px solid black;
+    width: 90vw; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0; 
+    box-sizing: border-box;
+
+}
+
+
+
+  
+  .inbox-container {
+    flex: 1;
+
+    padding: 20px;
+    border-right: 1px solid #ccc; /* Divider between inbox and message view */
+  }
+  
+  .message-container {
+    flex: 2;
+    padding: 20px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  }
+  

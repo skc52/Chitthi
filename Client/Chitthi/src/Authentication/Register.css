@@ -1,0 +1,41 @@
+.registerForm{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin: 10px;
+    width: auto;
+}
+
+.inputData{
+    display: flex;
+    /* justify-content: space-around; */
+
+}
+
+.dateData{
+    display: flex;
+}
+.registerForm div label{
+    flex: 1;
+}
+
+.registerForm div input{
+    flex:1;
+}
+.registerForm div p{
+    flex:1;
+    color: red;
+}
+.dateOfBirth{
+    /* flex-direction: column; */
+    
+}
+
+.registerBtn {
+    /* justify-self: flex-end; */
+    /* align-self: flex-end; */
+}
+

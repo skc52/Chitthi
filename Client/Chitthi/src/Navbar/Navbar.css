@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 20px 10px;
+    width: 100px;
+    height: 100vh; /* Full height */
+    position: fixed; 
+    left: 0;
+    top: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.navbar div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav-item {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.nav-item span {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Hover effects for nav items */
+.nav-item:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}

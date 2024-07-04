@@ -1,0 +1,94 @@
+.messageContainer {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-size: 1em;
+}
+
+#message {
+    width: 95%;
+    height: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    resize: none; /* Prevent textarea resizing */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+
+    
+}
+
+.subjectContainer input{
+    border: 20px;
+    font-size: 1em;
+}
+
+
+/* SendLetter.css */
+
+
+.formClass {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+
+}
+.header {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.letter {
+  
+    width: 800px; /* Adjust width as needed */
+    min-width: 600px;
+    padding: 10px;
+    background-color: #f0f0f091; 
+    border-radius: 8px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+.sendBtn{
+    font-size: 1em; /* Set font size to determine button size */
+    padding: 0.5em 1em; /* Padding around text to create button size */
+    border: 1px solid #ccc; /* Optional: Add border for visual separation */
+    background-color: #f0f0f0; /* Optional: Add background color */
+    cursor: pointer; /* Optional: Add pointer cursor on hover */
+  }
+.backBtn{
+    font-size: 1em; /* Set font size to determine button size */
+    padding: 0.5em 1em; /* Padding around text to create button size */
+    border: 1px solid #ccc; /* Optional: Add border for visual separation */
+    background-color: #b9b8b8; /* Optional: Add background color */
+    cursor: pointer; /* Optional: Add pointer cursor on hover */
+}
+textarea{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+p {
+    color: black;
+    font-weight: 500;
+}
+
+.buttons{
+    width: 80%;
+    /* border: 2px solid black; */
+    display: flex;
+
+    justify-content: space-between;
+}
